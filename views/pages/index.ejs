@@ -37,12 +37,15 @@
     <% benchmarks.forEach(function(benchmark){ %>
       <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
         <div class="overflow-hidden bg-white rounded-lg shadow hover:shadow-raised hover:translateY-2px transition">
-          <img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">
+          <!--<img class="w-full" src="https://stitches-cdn.hyperyolo.com/demo-bg.png" alt="Sunset in the mountains">-->
+          <iframe class="w-full"
+                  src="https://www.youtube.com/embed/<%= benchmark.yt_string%>">
+          </iframe>
           <div class="p-6 flex flex-col justify-between ">
             <h3 class="font-medium text-grey-darkest mb-4 leading-normal"><%= benchmark.name %></h3>
             <p class="inline-flex items-center">
               <%= benchmark.description %>
-              <a href="/benchmark/<%= benchmark.name %>">
+              <a href="/benchmark/<%= benchmark.id %>">
                 <span class="text-grey-dark text-sm">Read More</span>
               </a>
             </p>
