@@ -8,13 +8,13 @@ router.get('/:id', function (req, res) {
   var benchmarks = benchmarksYaml.getBenchmarks();
 
   var id = req.params.id;
-  console.log('does benchmarks.find exist: ' + benchmarks.find != undefined);
   var benchmark = benchmarks.find(function (benchmark) {
     return benchmark.id == id;
   });
   if (benchmark == undefined) {
-    res.render('pages/error.ejs', {message: 'That benchmark does not exist!', error: {
-      status: id + ' was not found in benchmarks',
+    res.render('pages/error.ejs', {title: 'Benchmark not found',
+      message: 'That benchmark does not exist!', error: {
+      status: '',
       stack: ''
     }});
   } else {
