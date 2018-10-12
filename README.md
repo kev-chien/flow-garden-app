@@ -1,11 +1,14 @@
 # flow-garden-app
 
+## Dependencies
+ - Node.js
+
 ## Quickstart
 
 `git clone <github-repo-link>`
 
 `cd flow-garden-app`
 
-`npm install`
+`npm install` OR `yarn`
 
-`DEBUG=myapp:* npm start`
+`npm run dev` OR `yarn dev`
